@@ -11,8 +11,8 @@ HeroVerge is a tool built for providing Gen-AI-based assistance to Support Engin
   ## Technologies Used
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
-![LLM](https://img.shields.io/badge/LLMs-llama3_70b,_llama3_8b,_llama2-000000?style=for-the-badge&logo=alpaca&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-32236B?style=for-the-badge&logo=flask&logoColor=white)
+![LLM](https://img.shields.io/badge/LLMs-llama3_70b,_llama3_8b,_llama2-67232A?style=for-the-badge&logo=alpaca&logoColor=white)
 ![IBM Watson](https://img.shields.io/badge/IBM_Watson-1F70C1?style=for-the-badge&logo=ibm&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain-3498DB?style=for-the-badge&logo=langchain&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
