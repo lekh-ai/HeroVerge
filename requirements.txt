@@ -1,0 +1,4 @@
+langchain_core
+langchain_ibm
+ibm_watsonx_ai
+Flask
