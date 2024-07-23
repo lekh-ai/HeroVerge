@@ -44,7 +44,7 @@ Both versions have different UI and frontend configurations. Unlike Streamlit/Gr
 ![Flask Version](https://github.com/lekh-ai/HeroVerge/blob/main/static/images/Flask%20UI.png)
 
 ### Streamlit Version (Hugging Face)
-![Streamlit Version](https://github.com/lekh-ai/HeroVerge/blob/main/static/images/Streamlit UI.png)
+![Streamlit Version](https://github.com/lekh-ai/HeroVerge/blob/main/static/images/Streamlit%20UI.png)
 
 ## Example Test Run Case
 
