@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Support Portal</title>
+    <title>HeroVerge - AI Support Platform</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 
@@ -34,7 +34,41 @@
         <div class="response" id="response"></div>
     </div>
 
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+        function sendRequest() {
+            const model = document.getElementById('model').value;
+            const query = document.getElementById('prompt').value;
+            const responseDiv = document.getElementById('response');
+
+            responseDiv.innerHTML = 'Processing...';
+
+            fetch('/process_query', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ model, query }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        responseDiv.innerHTML = `<p>Error: ${data.error}</p>`;
+                    } else {
+                        responseDiv.innerHTML = `
+                        <p><strong>Summary:</strong> ${data.summary}</p>
+                        <p><strong>Script:</strong> ${data.script}</p>
+                        <p><strong>Sentiment:</strong> ${data.sentiment}</p>
+                        <p><strong>Complete:</strong> ${data.complete}</p>
+                        <p><strong>Notes:</strong> ${data.notes}</p>
+                        <p><strong>Mail Draft:</strong> ${data.mail_draft}</p>
+                    `;
+                    }
+                })
+                .catch(error => {
+                    responseDiv.innerHTML = `<p>Error: ${error.message}</p>`;
+                });
+        }
+    </script>
 </body>
 
 </html>
