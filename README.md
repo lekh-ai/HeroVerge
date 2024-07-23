@@ -5,7 +5,7 @@ HeroVerge is a tool built for providing Gen-AI-based assistance to Support Engin
 [![Deploy in Hugging Face](https://img.shields.io/badge/Deploy-Hugging%20Face-ffd500?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/spaces/lekhsisodiya/HeroVerge-streamlit)
 
 For deploying in local server(flask version) pull the entire repository and run app.py.
- - LLM API creds would be made avaiable on request 
+ - LLM API creds would be made available on request 
 
 ## Features ✨
 
