@@ -8,6 +8,22 @@ HeroVerge is a tool built for providing Gen-AI-based assistance to Support Engin
 - **JSON Responses**: Returns JSON responses with 5 keys: `summary`, `script`, `sentiment`, `complete`, and `notes`. These responses can be configured at the backend to retain ticket data and provide a guide for further resolution.
 - **Client Sharable Email**: Frames a client-sharable email to address the query and take forward the next steps. `LangChain` is used to create a chain out of the JSON responses and cook up an email-based response from the JSON created by the AI model.
 
+  ## Technologies Used
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![LLM](https://img.shields.io/badge/LLMs-llama3_70b,_llama3_8b,_llama2-000000?style=for-the-badge&logo=alpaca&logoColor=white)
+![IBM Watson](https://img.shields.io/badge/IBM_Watson-1F70C1?style=for-the-badge&logo=ibm&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-3498DB?style=for-the-badge&logo=langchain&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Hugging Face](https://img.shields.io/badge/Hugging_Face-FFD500?style=for-the-badge&logo=hugging-face&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+
 ## Deployments
 
 There are two deployments of this project across two Python frameworks:
@@ -18,7 +34,7 @@ There are two deployments of this project across two Python frameworks:
 
 ### Streamlit Version
 - Deployed on Hugging Face
-- [Streamlit Deployment Link](https://sakdghasfkjas.com)
+- [Streamlit Deployment Link](https://huggingface.co/spaces/lekhsisodiya/HeroVerge-streamlit)
 
 Both versions have different UI and frontend configurations. Unlike Streamlit/Gradio, Flask supports HTML, CSS, and JS for more robust designs and functionality.
 
@@ -45,21 +61,7 @@ Both versions have different UI and frontend configurations. Unlike Streamlit/Gr
   "notes": "Customer is experiencing unknown issues with the APIs, need more information to troubleshoot"
 }
 ```
-## Technologies Used
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
-![LLM](https://img.shields.io/badge/LLMs-llama3_70b,_llama3_8b,_llama2-000000?style=for-the-badge&logo=alpaca&logoColor=white)
-![IBM Watson](https://img.shields.io/badge/IBM_Watson-1F70C1?style=for-the-badge&logo=ibm&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-3498DB?style=for-the-badge&logo=langchain&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![Hugging Face](https://img.shields.io/badge/Hugging_Face-FFD500?style=for-the-badge&logo=hugging-face&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 
 
 ### Future Development
