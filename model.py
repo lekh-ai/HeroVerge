@@ -5,8 +5,12 @@ from langchain_ibm import WatsonxLLM
 from ibm_watsonx_ai.foundation_models.utils.enums import ModelTypes
 from ibm_watsonx_ai.metanames import GenTextParamsMetaNames as GenParams
 from ibm_watsonx_ai.foundation_models import ModelInference
+import os
+import json
 
-apikey = "UQ2jF4FyhBND5S7Xc5ImfQOCRsikRFFJ6AtQe-80StGp"
+#Please contact me @+91 9179041912 for creds
+apikey = "available on request"
+project_id = "available on request"
 
 # Parameters for model inference
 parameters = {
@@ -18,24 +22,24 @@ parameters = {
 llama2_llm = WatsonxLLM(
     model_id=ModelTypes.LLAMA_2_70B_CHAT.value,
     url="https://jp-tok.ml.cloud.ibm.com",
-    project_id = "da4c5444-528c-4452-b677-71ed875add4c",
+    project_id=project_id,
     params=parameters,
-    apikey  = apikey
+    apikey=apikey
 )
 
 llama3_70b_llm = WatsonxLLM(
     model_id='meta-llama/llama-3-70b-instruct',
     url="https://jp-tok.ml.cloud.ibm.com",
-    project_id="da4c5444-528c-4452-b677-71ed875add4c",
-    apikey  = apikey,
+    project_id=project_id,
+    apikey=apikey,
     params=parameters,
 )
 
 llama3_8b_llm = WatsonxLLM(
     model_id='meta-llama/llama-3-8b-instruct',
     url="https://jp-tok.ml.cloud.ibm.com",
-    project_id = "da4c5444-528c-4452-b677-71ed875add4c",
-    apikey  = apikey,
+    project_id=project_id,
+    apikey=apikey,
     params=parameters,
 )
 
@@ -69,7 +73,33 @@ def format_llama2_prompt(system_instructions, user_prompt):
     return f"""<s>[INST] <<SYS>>{system_instructions.strip()}<</SYS>>{user_prompt.strip()}[/INST]"""
 
 def format_llama3_prompt(system_instructions, user_prompt):
-    return f"""<|begin_of_text|><|start_header_id|>system<|end_header_id|>{system_instructions.strip()}<|eot_id|><|start_header_id|>user<|end_header_id|>{user_prompt.strip()}<|eot_id|><|start_header_id|>assistant<|end_header_id|>"""
+    return f"""system{system_instructions.strip()}user{user_prompt.strip()}assistant"""
 
+# Function to generate mail draft using LLM
+def generate_mail_draft_llm(parsed_response):
+    mail_template = f"""
+    Dear Customer,
+    Thank you for reaching out to us. Below is the summary of our interaction:
+    Summary:
+    {parsed_response['summary']}
+    Script:
+    {parsed_response['script']}
+    Sentiment:
+    The sentiment of your message was noted as {parsed_response['sentiment']}.
+    Completion:
+    {parsed_response['complete']}
+    Notes:
+    {parsed_response['notes']}
+    Please let us know if you have any further questions or concerns.
+    Best regards,
+    Support Team
+    """
+    SYSTEM_MESSAGE = "You are an AI assistant. Please refine the following draft to make it a coherent and professional email:"
+    response = prompt_llama3_70b(SYSTEM_MESSAGE, mail_template)
 
+    try:
+        refined_mail_draft = json.loads(response).get("text", "Could not generate mail draft.")
+    except json.JSONDecodeError:
+        refined_mail_draft = response
 
+    return refined_mail_draft
