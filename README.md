@@ -41,7 +41,7 @@ Both versions have different UI and frontend configurations. Unlike Streamlit/Gr
 ## UI Appearance
 
 ### Flask Version (localhost)
-![Flask Version](path_to_flask_image)
+![Flask Version](https://github.com/lekh-ai/HeroVerge/blob/main/static/images/Flask%20UI.png)
 
 ### Streamlit Version (Hugging Face)
 ![Streamlit Version](path_to_streamlit_image)
