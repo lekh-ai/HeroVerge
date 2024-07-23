@@ -1,6 +1,8 @@
 # HeroVerge
 
 HeroVerge is a tool built for providing Gen-AI-based assistance to Support Engineers, maximizing productivity and managing extensive workloads.
+[![Deploy in Hugging Face](https://img.shields.io/badge/Deploy-Hugging%20Face-ffd500?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/spaces/lekhsisodiya/HeroVerge-streamlit)
+
 
 ## Features
 
