@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Support Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <div class="background">
+        <div class="blur blur1"></div>
+        <div class="blur blur2"></div>
+    </div>
+    <div class="container animated-border">
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/logoW.png') }}" alt="Logo" class="logo">
+        </div>
+        <h1>HeroVerge - AI Support Platform</h1>
+        <div class="input-group">
+            <label for="model">Choose Model:</label>
+            <select id="model">
+                <option value="llama2">Llama 2</option>
+                <option value="llama3_70b">Llama 3 70B</option>
+                <option value="llama3_8b">Llama 3 8B</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="prompt">Enter your query:</label>
+            <textarea id="prompt" rows="4"></textarea>
+        </div>
+        <button onclick="sendRequest()">Send</button>
+        <div class="response" id="response"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
